@@ -1,0 +1,687 @@
+/* import fonts from fonts.css file */
+
+@import url(./fonts.css);
+
+/*css variables */
+@import url(./partials/_variables.css);
+
+/*import global styling */
+
+@import url(./partials/_global.css);
+
+
+/* start navigation */
+
+/* Minimal Navbar */
+.navbar {
+    background-color: rgba(0, 0, 0, 0.8); /* Semi-transparent background */
+    transition: height 1s ease; /* Smooth transition for expansion */
+    overflow: hidden; /* Prevent content from overflowing when collapsed */
+    height: 50px; /* Minimal height when not hovered */
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 999;
+}
+
+/* On Hover, Expand the Navbar */
+.navbar:hover {
+    height: 120px; /* Height when the navbar expands */
+}
+
+/* Styling for Navbar Brand */
+.navbar-brand {
+    color: white;
+    font-size: 1.5rem;
+    padding: 1rem;
+    text-align: center;
+}
+
+/* Styling for Navbar Links */
+.navbar-nav {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding-top: 10px;
+}
+
+.navbar-nav .nav-item {
+    margin: 0 1rem;
+}
+
+.nav-link {
+    color: white;
+    text-transform: uppercase;
+    font-weight: 500;
+    text-decoration: none;
+    font-size: 1.1rem;
+    padding: 10px;
+    transition: color 0.3s ease;
+}
+
+/* Change color of navbar links on hover */
+.navbar-nav .nav-link:hover {
+    color: #ff8c00; /* Light orange color on hover */
+}
+
+/* Ensure the text is properly aligned */
+.navbar-collapse {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+
+
+/* Banner Area */
+.site-main .site-banner {
+    position: relative;
+    background: url(../img/HikeResize.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 100vh; /* Full viewport height */
+}
+
+.site-main .site-banner::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.4); /* Dark overlay */
+    z-index: 1;
+}
+
+.site-main .site-banner .site-title {
+    position: relative;
+    color: white; /* White color for title text */
+    font-family: 'Calibri', sans-serif;
+    z-index: 2;
+    text-align: center; /* Center the text */
+    padding-top: 20%;
+}
+
+.site-main .site-banner .site-title h1 {
+    font-size: 4rem;
+    font-weight: bold;
+}
+
+.site-main .site-banner .site-title h3 {
+    font-size: 2rem;
+    font-weight: 500;
+}
+
+.site-main .site-banner .site-title h4 {
+    font-size: 1.5rem;
+    font-weight: 400;
+}
+
+.site-main .site-banner .site-buttons {
+    padding-top: 1.75rem;
+}
+
+.site-main .site-banner .site-title .site-buttons button {
+    margin: 10px;
+    text-transform: uppercase;
+}
+
+/* Optional: Add text shadow to text */
+.site-main .site-banner .site-title h1,
+.site-main .site-banner .site-title h3,
+.site-main .site-banner .site-title h4 {
+    text-shadow: 2px 2px 4px #f0ac8b; /* Add shadow to text */
+}
+
+/* Style for social media links */
+.social-links a {
+    font-size: 24px; /* Icon size */
+    margin: 0 15px;  /* Add spacing between icons */
+    color: white; /* Set the same color as the "Software Engineer" text */
+    transition: color 0.3s, transform 0.3s; /* Smooth hover transition */
+}
+
+/* Hover effect for the icons */
+.social-links a:hover {
+    color: #007bff; /* Change color on hover (same color as button) */
+    transform: scale(1.1); /* Slight scale effect on hover */
+}
+
+/* Optional: Adjust the icon size for smaller screens */
+@media (max-width: 768px) {
+    .social-links a {
+        font-size: 20px;
+    }
+}
+
+/* Style for the social links container */
+.social-links {
+    margin-top: 10px; /* Adds space between 'Software Engineer' and social links */
+}
+
+  
+
+
+
+/* End Banner Area */
+
+
+/* Start About Area */
+
+/* About Section Styling */
+.about-area {
+  position: relative;
+  padding: 6rem 0;
+}
+
+.about-title {
+  padding: 2rem 3rem;
+}
+
+.about-title h2 {
+  font-size: 2.5rem;
+  font-weight: 600;
+  text-align: left;
+}
+
+.about-title p {
+  font-size: 1.1rem;
+  color: #555;
+  line-height: 1.8;
+}
+
+.about-title .btn {
+  margin-top: 2rem;
+  font-size: 1rem;
+}
+
+/* About Images Section */
+.about-images {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.image-row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 2rem;
+}
+
+.image-item {
+  position: relative;
+  flex: 1;
+  margin-right: 1rem;
+  overflow: hidden;
+  height: 200px; /* Adjust based on your preference */
+}
+
+.image-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.5; /* Make images faded */
+  transition: opacity 0.5s ease;
+}
+
+.image-item:hover img {
+  opacity: 1; /* Show image fully on hover */
+}
+
+/* Ensure proper alignment and fading of the image background */
+.about-area .container-fluid {
+  position: relative;
+}
+
+.about-area .row {
+  position: relative;
+  z-index: 2;
+}
+
+/* Add subtle background images or effects */
+.about-area::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url('./img/Backgrounds/overlay-image.png'); /* Add your overlay image */
+  background-size: cover;
+  background-position: center;
+  opacity: 0.2; /* Faded background */
+  z-index: 1;
+}
+
+
+/*End About Area*/
+
+/*Start Skill Area*/
+
+/* Skill Area */
+.site-main .skill-area {
+    padding: 3rem 2rem;
+    background-image: var(--gradient-sundown-color);
+    background-size: cover;
+    background-position: center;
+    margin-bottom: 4rem;
+}
+
+.site-main .skill-area .skill-header {
+    padding: 0rem 2rem;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.site-main .skill-area .skill-header h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #fff;
+}
+
+/* Ensure all skill cards are the same size */
+.site-main .skill-area .row .col-lg-2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+.site-main .skill-area .row .col-lg-2 .single-skill {
+    text-align: center;
+    padding: 1.5rem; /* Padding for spacing */
+    width: 100%;
+    height: 300px; /* Fixed height for consistency */
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, filter 0.3s ease;
+    border-radius: 10px;
+    background-color: #fff;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Vertically center content */
+    align-items: center;
+}
+
+.site-main .skill-area .row .col-lg-2 .single-skill img {
+    width: 70%; /* Ensure images are responsive */
+    max-height: 100px; /* Maintain consistent image height */
+    margin-bottom: 1rem;
+    filter: grayscale(100%);
+    transition: filter 0.3s ease;
+}
+
+.site-main .skill-area .row .col-lg-2 .single-skill:hover {
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.15);
+    transform: translateY(-5px);
+}
+
+.site-main .skill-area .row .col-lg-2 .single-skill:hover img {
+    filter: grayscale(0%);
+}
+
+.site-main .skill-area .row .progress-bar {
+    width: 100%;
+    margin-top: 1rem;
+    text-align: center;
+}
+
+.site-main .skill-area .row .progress-bar .progress-text {
+    font-weight: bold;
+    font-size: 1rem;
+    color: #333;
+}
+
+.skill-area .progress-bar progress {
+    width: 100%;
+    height: 12px;
+    appearance: none;
+    border-radius: 5px;
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+    transition: all 0.5s ease;
+}
+
+.skill-area .progress-bar progress::-webkit-progress-bar {
+    background: #eee;
+    border-radius: 5px;
+}
+
+.skill-area .progress-bar progress::-webkit-progress-value {
+    background: linear-gradient(to right, #ffcc00, #66cc00);
+    border-radius: 5px;
+}
+
+.skill-area .progress-bar progress::-webkit-progress-text {
+    color: black;
+}
+
+.skill-area .progress-bar progress::-moz-progress-bar {
+    background: linear-gradient(to right, #ffcc00, #66cc00);
+    border-radius: 5px;
+}
+
+.skill-area .progress-bar progress::-ms-fill {
+    background: linear-gradient(to right, #ffcc00, #66cc00);
+    border-radius: 5px;
+}
+
+.site-main .skill-area .single-skill .progress-bar {
+    margin-top: 0.5rem;
+}
+
+/* Optional: Add a subtle shadow to the progress bar */
+.skill-area .progress-bar progress {
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+/*PROGRESS BAR */
+
+/* Project Area */
+
+/* Project Area */
+
+/* Projects Section */
+.site-main .project-area {
+    background-image: var(--gradient-custom-light); /* Light gradient background */
+    padding: 3rem 2rem;
+    margin-bottom: 4rem;
+}
+
+/* Project Header */
+.site-main .project-area .project-header {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.site-main .project-area .project-header h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #fff;
+}
+
+/* Adjusted grid for project items */
+.site-main .project-area .grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center; /* Center the grid */
+    margin: 20px 0;
+}
+
+/* Ensure each project item is centered */
+.site-main .project-area .row .col-lg-4 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+/* Styling for individual project items */
+.site-main .project-area .row .col-lg-4 .single-project {
+    text-align: center;
+    padding: 1.5rem;
+    width: 100%;
+    height: auto;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-radius: 10px;
+    background-color: #fff;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Project image styling */
+.site-main .project-area .row .col-lg-4 .single-project img {
+    width: 70%;
+    max-height: 100px;
+    margin-bottom: 1rem;
+    filter: grayscale(100%);
+    transition: filter 0.3s ease;
+}
+
+/* Hover effect on project items */
+.site-main .project-area .row .col-lg-4 .single-project:hover {
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.15);
+    transform: translateY(-5px);
+}
+
+.site-main .project-area .row .col-lg-4 .single-project:hover img {
+    filter: grayscale(0%);
+}
+
+/* Button Group for Filtering Projects */
+.button-group {
+    list-style-type: none; /* Remove default list style */
+    padding-left: 0; /* Remove left padding */
+    display: flex; /* Flex to align buttons horizontally */
+    justify-content: center; /* Center the buttons */
+    margin-bottom: 20px;
+    z-index: 10;
+    position: relative;
+}
+
+.button-group .list {
+    padding: 12px 25px;
+    margin-right: 15px;
+    background-color: #007bff;
+    color: white;
+    font-size: 1rem;
+    cursor: pointer;
+    text-transform: uppercase;
+    border-radius: 5px;
+    transition: background-color 0.3s, transform 0.3s;
+    display: inline-block;
+}
+
+/* Active button state */
+.button-group .list.active {
+    background-color: #0056b3; /* Darker blue for active button */
+}
+
+/* Hover effect */
+.button-group .list:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+}
+
+/* Styling for the project box */
+.site-main .project-area .itemBox {
+    position: relative;
+    overflow: hidden;
+    box-shadow: var(--box-shadow);
+    border-radius: 10px;
+    transition: transform 0.3s ease-in-out;
+    background-color: #fff;
+    width: 100%;
+    max-width: 350px; /* Optional: limits the max width of each project box */
+}
+
+.site-main .project-area .itemBox:hover {
+    transform: scale(1.05);
+}
+
+/* Styling for the project image container */
+.site-main .project-area .itemBox .img {
+    position: relative;
+    overflow: hidden;
+    height: 250px; /* Ensures the image area is uniform across projects */
+    z-index: 0;
+}
+
+.site-main .project-area .itemBox .img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease-in-out;
+}
+
+.site-main .project-area .itemBox:hover .img img {
+    transform: scale(1.1); /* Slight zoom effect on hover */
+}
+
+/* Title and description styles */
+.site-main .project-area .itemBox .title {
+    padding: 1rem;
+    background: rgba(255, 255, 255, 0.8); /* Slightly transparent background */
+    text-align: center;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    z-index: 1;
+}
+
+.site-main .project-area .itemBox .title h4 {
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.site-main .project-area .itemBox .project-description {
+    font-size: 14px;
+    color: #555;
+    margin: 10px 0;
+}
+
+/* Button styles inside the project item */
+.site-main .project-area .itemBox button {
+    margin-top: 10px;
+    text-transform: uppercase;
+    font-weight: 500;
+}
+
+/* Hover effect for project buttons */
+.site-main .project-area .itemBox button:hover {
+    background-color: #3498db;
+    color: #fff;
+}
+
+/* Hide projects initially (using show class in jQuery) */
+.hide {
+    display: none;
+}
+
+/* Show projects */
+.show {
+    display: block;
+}
+
+/* Responsive Adjustments */
+@media only screen and (max-width: 768px) {
+    .site-main .project-area .grid {
+        justify-content: center;
+    }
+
+    .site-main .project-area .itemBox {
+        width: 100%;
+        max-width: 100%;
+    }
+}
+
+/* End Project Area */
+
+/* Start Interests Area */
+
+.site-main .interest-area .interest-title p {
+    padding: 1rem 7rem;
+}
+
+.site-main .interest-area .interest {
+    background: #ffffff10;
+    box-shadow: var(--box-shadow);
+    margin: 3rem 0rem;
+}
+
+.site-main .interest-area .interest .interest-img {
+    padding: 1.5rem;
+}
+
+.site-main .interest-area .interest .about-interest {
+    padding-top: 1.5rem;
+}
+
+.site-main .interest-area .interest .about-interest h4 {
+    font: normal 500 21px/20px var(--roboto);
+}
+
+.site-main .interest-area .interest .about-interest p{
+    font-size: 22px;
+}
+
+.site-main .interest-area .owl-carousel .owl-item {
+    display: flex;
+    justify-content: center;
+    padding: 0rem 1.5rem;
+}
+
+.site-main .interest-area .owl-carousel .owl-dots .owl-dot.active span {
+    background: var(--primary-color);
+    width: 12px;
+    height: 12px;
+}
+
+/* End Interests Area */
+
+/*Footer Area */
+
+footer.footer-area {
+    padding: 5rem 0rem;
+    background: url(../img/Backgrounds/oceanSunsetBackground.jpg) no-repeat;
+}
+
+footer.footer-area .social h5 {
+    font: normal 500 23px/30px var(--roboto);
+}
+
+footer.footer-area .social a > i {
+    font-size:22px;
+    padding: 2rem;
+    color: var(--border-color);
+}
+
+footer.footer-area .social a:hover > i {
+    color: var(--primary-color);
+}
+.site-logo img {
+    width: 5%; /* Ensures the image stretches to the container width */
+    height: 5%; /* Ensures the image stretches to the container height */
+    object-fit: cover; /* Ensures the image covers the container without distortion */
+  }
+  
+  /* Styling for the contact information section */
+  .social {
+    margin-top: 20px; /* Adjust margin as needed */
+  }
+  
+  .social h5 {
+    font-size: 1.5rem; /* Adjust text size */
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+  }
+  
+  /* Styling for the social media icons */
+  .social-links {
+    display: flex;
+    justify-content: center;
+    gap: 15px; /* Space between icons */
+  }
+  
+  .social-icon {
+    font-size: 2rem; /* Adjust icon size */
+    color: #333; /* Default icon color */
+    transition: color 0.3s;
+  }
+  
+  .social-icon:hover {
+    color: #007bff; /* Change color on hover */
+  }
+  
+  
+/*End Footer Area */
+
+
+
+

@@ -1,0 +1,38 @@
+
+
+
+html, body{
+    margin: 0%;
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+}
+
+/* CSS Variables */
+
+:root {
+    --primary-color: #003366;
+    --primary-color2: #c6e2ff;
+    --title-color: #141313;
+    --text-color: #777777;
+    --border-color: #cccccc;
+    --gradient-color: linear-gradient(315deg, #ff4e00 0%, #ec9f05 74%);
+    --gradient-blue-color: linear-gradient(0deg, #42378f 0%, #f53844 74%);
+    --gradient-sundown-color: linear-gradient(0deg, #009dc4 0%, #f0ac8b 74%);
+    --gradient-sundown-reverse-color: linear-gradient(180deg, #009dc4 0%, #f0ac8b 74%);
+    --gradient-custom-light: linear-gradient(180deg, #A0D8F1 0%, #FFB6A0 100%);
+
+
+
+    
+    --gradient-purple-color: linear-gradient(90deg, #4458dc 0%, #854fee 100%);
+    --shadow-color: 0px 10px 30px rgba(118, 85, 225, 0.3);
+    --box-shadow: 0px 10px 30px rgba(57,56,61,0.205);
+    --gradient-green-color: linear-gradient(315deg, #00b712 0%, #5aff15 74%);
+
+
+    /* font family variables */
+    --roboto: 'Roboto', cursive;
+    --calibri: 'Calibri', sans-serif;
+    
+}
