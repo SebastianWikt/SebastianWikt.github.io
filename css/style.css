@@ -258,7 +258,6 @@
 
 /*End About Area*/
 
-/*Start Experience Area*/
 /* Professional Experience Section */
 #experience-section {
     padding: 4rem 2rem;
@@ -268,15 +267,31 @@
     gap: 2rem;
 }
 
-/* Each Experience Item */
+/* Each Experience Item with Different Background Colors */
+.experience-item:nth-child(1) {
+    background-color: #ffebcd; /* Light beige */
+}
+
+.experience-item:nth-child(2) {
+    background-color: #d3f8e2; /* Light green */
+}
+
+.experience-item:nth-child(3) {
+    background-color: #f0f8ff; /* Light blue */
+}
+
+.experience-item:nth-child(4) {
+    background-color: #f9e1e1; /* Light pink */
+}
+
 .experience-item {
-    background-color: #fff;
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     padding: 2rem;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transition: transform 0.6s ease, box-shadow 0.6s ease, background-color 0.3s ease-in-out;
 }
 
+/* Hover Effect */
 .experience-item:hover {
     transform: translateY(-5px);
     box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
@@ -289,12 +304,24 @@
     color: #333;
     margin-bottom: 1rem;
     cursor: pointer;
-    transition: color 0.3s ease, transform 0.3s ease;
+    transition: transform 0.3s ease, color 0.3s ease;
 }
 
-.experience-title:hover {
-    color: #007bff; /* Change color on hover */
-    transform: translateX(5px); /* Subtle animation for title */
+/* Hover Effect for Title - Text color contrasts with the background */
+.experience-item:nth-child(1) .experience-title:hover {
+    color: #333; /* Dark text for Light Beige */
+}
+
+.experience-item:nth-child(2) .experience-title:hover {
+    color: #2f4f4f; /* Dark Slate Gray text for Light Green */
+}
+
+.experience-item:nth-child(3) .experience-title:hover {
+    color: #00008b; /* Dark Blue for Light Blue background */
+}
+
+.experience-item:nth-child(4) .experience-title:hover {
+    color: #8b0000; /* Dark Red for Light Pink background */
 }
 
 /* Experience Details */
@@ -312,10 +339,10 @@
 /* Dropdown Animation */
 .experience-details.open {
     display: block;
-    animation: slideDown 0.3s ease;
+    animation: slideDown 0.6s ease-in-out; /* Slower dropdown animation */
 }
 
-/* Add animation for smooth sliding */
+/* Slide down animation */
 @keyframes slideDown {
     0% {
         height: 0;
@@ -336,6 +363,16 @@
     color: #007bff; /* Accent color for labels */
 }
 
+/* Optional: Add a divider between each experience */
+.experience-item:not(:last-child) {
+    border-bottom: 2px solid #ddd;
+}
+
+/* Styling for the section background */
+#experience-section {
+    background-color: #f4f9fd;
+}
+
 /* Make sure text is properly aligned */
 .experience-details ul {
     margin-left: 1.5rem;
@@ -345,28 +382,6 @@
 /* Hover Effects */
 .experience-title:hover {
     text-decoration: underline;
-}
-
-/* Styling for the section background */
-#experience-section {
-    background-color: #f4f9fd;
-}
-
-/* Add a subtle gradient background for each item */
-.experience-item {
-    background: linear-gradient(135deg, #ffffff 50%, #f9f9f9 50%);
-    background-size: 200% 200%;
-    background-position: right bottom;
-    transition: background-position 0.3s ease-in-out;
-}
-
-.experience-item:hover {
-    background-position: left top;
-}
-
-/* Optional: Add a divider between each experience */
-.experience-item:not(:last-child) {
-    border-bottom: 2px solid #ddd;
 }
 
 /* Ensure the layout is responsive */
