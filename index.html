@@ -317,6 +317,29 @@
 </section>
 <!-- =========================================== End Project Area =========================================-->
 
+<!-- =========================================== Start Experience Area =========================================-->
+<section id="experience-section">
+  <div class="experience-item">
+      <h3 class="experience-title">Job Title 1</h3>
+      <div class="experience-details">
+          <p><strong>Skills:</strong> Skill 1, Skill 2, Skill 3</p>
+          <p><strong>Details:</strong> Description of the role and responsibilities...</p>
+          <p><strong>Time Worked:</strong> January 2020 - December 2021</p>
+      </div>
+  </div>
+  <div class="experience-item">
+      <h3 class="experience-title">Job Title 2</h3>
+      <div class="experience-details">
+          <p><strong>Skills:</strong> Skill A, Skill B, Skill C</p>
+          <p><strong>Details:</strong> Description of the role and responsibilities...</p>
+          <p><strong>Time Worked:</strong> January 2018 - December 2019</p>
+      </div>
+  </div>
+  <!-- Add more experiences as needed -->
+</section>
+
+ <!-- =========================================== End Experience Area =========================================-->
+
 
 
 
@@ -549,7 +572,7 @@
             </div>
             <div class="col-lg-8 col-md-12 about-interest">
               <h4 class="text-uppercase">Gym </h4>
-              <p class="para">I workout at the gym atleast 3-4 days a week to prioritize my physical
+              <p class="para">I workout at the gym at least 3-4 days a week to prioritize my physical
                 and mental health
               </p>
             </div>
@@ -699,6 +722,41 @@
           imageObserver.observe(image); // Observe each lazy-loaded image
       });
   });
+  </script>
+
+  <script>
+    // Handle scrolling to dynamically load the experience section
+const experienceSection = document.getElementById('experience-section');
+let hasLoadedExperience = false;
+
+window.addEventListener('scroll', () => {
+    if (!hasLoadedExperience && isElementInViewport(experienceSection)) {
+        loadExperienceItems();
+        hasLoadedExperience = true;
+    }
+});
+
+// Function to check if an element is in the viewport
+function isElementInViewport(el) {
+    const rect = el.getBoundingClientRect();
+    return rect.top >= 0 && rect.bottom <= window.innerHeight;
+}
+
+// Function to load the experience items dynamically
+function loadExperienceItems() {
+    // You can fetch data from a file or API and add it dynamically if needed
+    console.log("Experience items have been loaded dynamically.");
+    // Additional dynamic loading logic can go here if necessary
+}
+
+// Handle dropdown toggle for experience details
+const experienceTitles = document.querySelectorAll('.experience-title');
+experienceTitles.forEach((title) => {
+    title.addEventListener('click', () => {
+        const details = title.nextElementSibling;
+        details.classList.toggle('open');
+    });
+});
   </script>
 
   

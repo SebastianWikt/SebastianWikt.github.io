@@ -248,7 +248,7 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background-image: url('./img/Backgrounds/overlay-image.png'); /* Add your overlay image */
+  background-image: url('./img/Backgrounds/oceanSunsetBackground.jpg'); /* Add your overlay image */
   background-size: cover;
   background-position: center;
   opacity: 0.2; /* Faded background */
@@ -258,6 +258,133 @@
 
 /*End About Area*/
 
+/*Start Experience Area*/
+/* Professional Experience Section */
+#experience-section {
+    padding: 4rem 2rem;
+    background-color: #f4f4f9;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+/* Each Experience Item */
+.experience-item {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 2rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.experience-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Experience Title */
+.experience-title {
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 1rem;
+    cursor: pointer;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.experience-title:hover {
+    color: #007bff; /* Change color on hover */
+    transform: translateX(5px); /* Subtle animation for title */
+}
+
+/* Experience Details */
+.experience-details {
+    display: none;
+    padding: 1.5rem;
+    background-color: #f9f9f9;
+    border-left: 4px solid #007bff; /* Accent line */
+    margin-top: 1.5rem;
+    font-size: 1.1rem;
+    color: #555;
+    border-radius: 8px;
+}
+
+/* Dropdown Animation */
+.experience-details.open {
+    display: block;
+    animation: slideDown 0.3s ease;
+}
+
+/* Add animation for smooth sliding */
+@keyframes slideDown {
+    0% {
+        height: 0;
+        opacity: 0;
+    }
+    100% {
+        height: auto;
+        opacity: 1;
+    }
+}
+
+/* Additional Styles for List Items */
+.experience-details p {
+    margin-bottom: 1rem;
+}
+
+.experience-details strong {
+    color: #007bff; /* Accent color for labels */
+}
+
+/* Make sure text is properly aligned */
+.experience-details ul {
+    margin-left: 1.5rem;
+    list-style-type: disc;
+}
+
+/* Hover Effects */
+.experience-title:hover {
+    text-decoration: underline;
+}
+
+/* Styling for the section background */
+#experience-section {
+    background-color: #f4f9fd;
+}
+
+/* Add a subtle gradient background for each item */
+.experience-item {
+    background: linear-gradient(135deg, #ffffff 50%, #f9f9f9 50%);
+    background-size: 200% 200%;
+    background-position: right bottom;
+    transition: background-position 0.3s ease-in-out;
+}
+
+.experience-item:hover {
+    background-position: left top;
+}
+
+/* Optional: Add a divider between each experience */
+.experience-item:not(:last-child) {
+    border-bottom: 2px solid #ddd;
+}
+
+/* Ensure the layout is responsive */
+@media only screen and (max-width: 768px) {
+    #experience-section {
+        padding: 2rem;
+    }
+
+    .experience-title {
+        font-size: 1.5rem;
+    }
+
+    .experience-details {
+        font-size: 1rem;
+    }
+}
+
+/*End Experience Area*/
 /*Start Skill Area*/
 
 /* Skill Area */
