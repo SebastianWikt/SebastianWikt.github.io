@@ -523,7 +523,7 @@
 
 /* Projects Section */
 .site-main .project-area {
-    background-image: var(--gradient-custom-light); /* Light gradient background */
+    background-image: linear-gradient(180deg, #A0D8F1 0%, #FFB6A0 100%); /* Light gradient background */
     padding: 3rem 2rem;
     margin-bottom: 4rem;
 }
