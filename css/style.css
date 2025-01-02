@@ -405,7 +405,7 @@
 /* Skill Area */
 .site-main .skill-area {
     padding: 3rem 2rem;
-    background-image: var(--gradient-sundown-color);
+    background-image: linear-gradient(0deg, #009dc4 0%, #f0ac8b 74%);
     background-size: cover;
     background-position: center;
     margin-bottom: 4rem;
