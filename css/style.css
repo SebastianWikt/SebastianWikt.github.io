@@ -678,21 +678,49 @@
     }
 }
 
+/* Start Interests Area */
+
+/* Start Interests Area */
 
 /* Start Interests Area */
 
 .site-main .interest-area .interest-title p {
-    padding: 1rem 7rem;
+    font-size: 1.5rem; /* Increase the font size */
+    line-height: 1.8; /* Keep the line height consistent */
+    color: #6c757d; /* Keep the subtle grey color */
+    padding: 1rem 0; /* Set only vertical padding, removing horizontal padding */
 }
 
+.site-main .interest-area .interest-title {
+    padding: 0; /* Ensure no extra padding is added above the text */
+}
+
+/* End Interests Area */
+
+
+.site-main .interest-area .interest-title h1 {
+    font-size: 2.5rem; /* You can also adjust the heading size if needed */
+}
+
+
+
 .site-main .interest-area .interest {
-    background: #ffffff10;
-    box-shadow: var(--box-shadow);
-    margin: 3rem 0rem;
+    background: #f9f9f9; /* Light grey background for cleaner look */
+    border-radius: 8px; /* Rounded corners for soft edges */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+    margin: 3rem 0; /* Ensure consistent margin between items */
+    padding: 2rem;
+    transition: transform 0.3s ease-in-out;
+}
+
+.site-main .interest-area .interest:hover {
+    transform: translateY(-10px); /* Hover effect to make it interactive */
 }
 
 .site-main .interest-area .interest .interest-img {
     padding: 1.5rem;
+    border-radius: 8px;
+    overflow: hidden;
 }
 
 .site-main .interest-area .interest .about-interest {
@@ -700,17 +728,25 @@
 }
 
 .site-main .interest-area .interest .about-interest h4 {
-    font: normal 500 21px/20px var(--roboto);
+    font-size: 1.6rem;
+    font-weight: 700; /* Bold for better heading contrast */
+    text-transform: uppercase;
+    color: #333; /* Darker color for the heading */
+    margin-bottom: 1rem;
+    letter-spacing: 1px;
 }
 
-.site-main .interest-area .interest .about-interest p{
-    font-size: 22px;
+.site-main .interest-area .interest .about-interest p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    color: #555; /* Slightly lighter color for paragraph text */
+    margin-bottom: 1.5rem;
 }
 
 .site-main .interest-area .owl-carousel .owl-item {
     display: flex;
     justify-content: center;
-    padding: 0rem 1.5rem;
+    padding: 0 1.5rem;
 }
 
 .site-main .interest-area .owl-carousel .owl-dots .owl-dot.active span {
@@ -720,6 +756,7 @@
 }
 
 /* End Interests Area */
+
 
 /*Footer Area */
 
