@@ -160,10 +160,23 @@
     margin-top: 10px; /* Adds space between 'Software Engineer' and social links */
 }
 
-  
+/* Gradient orange style for the primary button */
+.site-main .site-banner .site-title .site-buttons button.primary-button {
+    background: linear-gradient(45deg, #FFA500, #FF7F00); /* Gradient from orange to a deeper orange */
+    color: white; /* White text */
+    border: none; /* Remove any border */
+    padding: 10px 20px; /* Add padding for better button size */
+    font-size: 1rem; /* Adjust font size */
+    text-transform: uppercase; /* Ensure uppercase text */
+    cursor: pointer; /* Change cursor to pointer */
+    transition: background-color 0.3s, transform 0.3s; /* Smooth hover transition */
+}
 
-
-
+/* Hover effect for the button */
+.site-main .site-banner .site-title .site-buttons button.primary-button:hover {
+    background: linear-gradient(45deg, #FF7F00, #FFA500); /* Inverse the gradient on hover */
+    transform: scale(1.05); /* Slight scale effect */
+}
 /* End Banner Area */
 
 
@@ -715,19 +728,29 @@ footer.footer-area {
     background: url(../img/Backgrounds/oceanSunsetBackground.jpg) no-repeat;
 }
 
-footer.footer-area .social h5 {
-    font: normal 500 23px/30px var(--roboto);
-}
-
+/* Slightly lighter blue for the icons */
 footer.footer-area .social a > i {
-    font-size:22px;
+    font-size: 22px;
     padding: 2rem;
-    color: var(--border-color);
+    color: #006fa6; /* Set the default icon color to a lighter blue */
+    transition: color 0.3s, transform 0.3s; /* Add smooth transition for color and scale */
 }
 
+/* Hover effect for the icons */
 footer.footer-area .social a:hover > i {
-    color: var(--primary-color);
+    color: #ff6347; /* Highlight color on hover (change to your preferred color) */
+    transform: scale(1.1); /* Slight scale effect on hover */
 }
+
+/* Match the "Contact me" text color with the icon color */
+footer.footer-area .social h5 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+    color: #006fa6; /* Match the "Contact me" text with the icon color */
+}
+
 .site-logo img {
     width: 5%; /* Ensures the image stretches to the container width */
     height: 5%; /* Ensures the image stretches to the container height */
