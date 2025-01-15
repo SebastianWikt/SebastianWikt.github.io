@@ -4,10 +4,142 @@
 
 /*css variables */
 @import url(./partials/_variables.css);
+/*Start Vars*/
+
+
+html, body{
+    margin: 0%;
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+}
+
+/* CSS Variables */
+
+:root {
+    --primary-color: #003366;
+    --primary-color2: #c6e2ff;
+    --title-color: #141313;
+    --text-color: #777777;
+    --border-color: #cccccc;
+    --gradient-color: linear-gradient(315deg, #ff4e00 0%, #ec9f05 74%);
+    --gradient-blue-color: linear-gradient(0deg, #42378f 0%, #f53844 74%);
+    --gradient-sundown-color: linear-gradient(0deg, #009dc4 0%, #f0ac8b 74%);
+    --gradient-sundown-reverse-color: linear-gradient(180deg, #009dc4 0%, #f0ac8b 74%);
+    --gradient-custom-light: linear-gradient(180deg, #A0D8F1 0%, #FFB6A0 100%);
+
+
+
+    
+    --gradient-purple-color: linear-gradient(90deg, #4458dc 0%, #854fee 100%);
+    --shadow-color: 0px 10px 30px rgba(118, 85, 225, 0.3);
+    --box-shadow: 0px 10px 30px rgba(57,56,61,0.205);
+    --gradient-green-color: linear-gradient(315deg, #00b712 0%, #5aff15 74%);
+
+
+    /* font family variables */
+    --roboto: 'Roboto', cursive;
+    --calibri: 'Calibri', sans-serif;
+    
+}
+
+/*End Vars*/
 
 /*import global styling */
 
 @import url(./partials/_global.css);
+/*Global vars*/
+
+/* Global Classes */
+
+html {
+    scroll-padding-top: 20%;
+}
+
+body, html {
+    margin: 0%;
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+    font-family: var(--calibri);
+}
+
+.title-text {
+    font: normal bold 40px/72px var(--calibri);
+}
+
+.text-uppercase {
+    text-transform: uppercase;
+}
+
+/* Buttons */
+
+.button {
+    padding: 0.8rem 2.2rem;
+    font: normal 500 16px/20px var(--calibri);
+    position: relative;
+    border: 3px solid transparent;
+    border-radius: 4px;
+}
+
+.button.primary-button {
+    background: var(--gradient-color);
+    background-clip: padding-box;
+    color: whitesmoke;
+    transition: background 0.6s ease;
+    box-shadow: var(--box-shadow);
+}
+
+.button.primary-button:hover {
+    background: whitesmoke;
+    background-clip: padding-box;
+    color: black;
+}
+
+.button.primary-button::after, .button.secondary-button::after{
+    position: absolute;
+    top: -2px; left: -2px;
+    bottom: -2px; right: -2px;
+    background: var(--gradient-color);
+    content:'';
+    z-index: -1;
+    border-radius: 6px;
+}
+
+.button.secondary-button {
+    background: white;
+    background-clip: padding-box;
+    transition: background 0.6s ease;
+}
+
+.button.secondary-button:hover {
+    background: var(--gradient-color);
+    color: whitesmoke;
+    box-shadow: var(--box-shadow);
+}
+
+p.para {
+    color: var(--text-color);
+    font: normal 500 16px/25px var;
+}
+
+.font-roboto {
+    font-family: var(--roboto);
+}
+
+.navbar_fixed {
+    position: fixed;
+    width: 100%;
+    top: -1px;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.8); /* Set to the same dark, semi-transparent color */
+    box-shadow: var(--box-shadow);
+    z-index: 999;
+    transition: background 1s ease;
+}
+
+/*End Global Vars*/
 
 
 /* start navigation */
@@ -161,8 +293,9 @@
 }
 
 /* Gradient orange style for the primary button */
+/* Override gradient for primary button to a solid background */
 .site-main .site-banner .site-title .site-buttons button.primary-button {
-    background: linear-gradient(45deg, #FFA500, #FF7F00); /* Gradient from orange to a deeper orange */
+    background-color: black !important; /* Solid orange color */
     color: white; /* White text */
     border: none; /* Remove any border */
     padding: 10px 20px; /* Add padding for better button size */
@@ -174,9 +307,10 @@
 
 /* Hover effect for the button */
 .site-main .site-banner .site-title .site-buttons button.primary-button:hover {
-    background: linear-gradient(45deg, #FF7F00, #FFA500); /* Inverse the gradient on hover */
+    background-color: #FF7F00 !important; /* Darker orange color on hover */
     transform: scale(1.05); /* Slight scale effect */
 }
+
 /* End Banner Area */
 
 
